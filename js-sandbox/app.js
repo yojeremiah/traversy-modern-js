@@ -305,7 +305,7 @@ const people = [
 for (let i = 0; i < people.length; i++) {
   console.log(people[i].name);;
 }
-*/
+
 
 // DATES & TIMES
 let val;
@@ -330,3 +330,230 @@ birthday.setHours(4);
 birthday.setMinutes(45);
 birthday.setSeconds(43);
 console.log(birthday);
+
+
+// IF-ELSE & COMPARISON OPERATORS
+const id = 100;
+// Equality operator (value only)
+if (id == 100) {
+  console.log('CORRECT');
+}
+else {
+  console.log('NOT CORRECT');
+}
+// Non-equality operator
+if (id != 101) {
+  console.log('CORRECT');
+}
+else {
+  console.log('NOT CORRECT');
+}
+// Strict equality operator (value & type)
+if (id === 100) {
+  console.log('CORRECT');
+}
+else {
+  console.log('NOT CORRECT');
+}
+// Strict non-equality operator (value & type)
+if (id !== 100) {
+  console.log('CORRECT');
+}
+else {
+  console.log('NOT CORRECT');
+}
+// Check if value is defined
+if (typeof id !== undefined) {
+  console.log(`The ID is ${id}`);
+}
+else {
+  console.log('NO ID defined');
+}
+// Greater or less than
+if (id > 200) {
+  console.log('CORRECT');
+}
+else {
+  console.log('NOT CORRECT');
+}
+if (id < 200) {
+  console.log('CORRECT');
+}
+else {
+  console.log('NOT CORRECT');
+}
+// Else-if statements
+const color = 'yellow';
+if (color === 'red') {
+  console.log('Color is red');
+}
+else if (color === 'Blue') {
+  console.log('Color is blue');
+}
+else {
+  console.log('Color is not red or blue');
+}
+// Logical Operators (AND &&) (OR ||)
+const name = 'Bob';
+const age = 20;
+// AND &&
+if (age > 0 && age < 12) {
+  console.log(`${name} is a child`);
+}
+else if (age >= 133 && age <= 19) {
+  console.log(`${name} is a teenager`);
+}
+else {
+  console.log(`${name} is an adult`);
+}
+// OR ||
+if (age < 16 || age > 65) {
+  console.log(`${name} cannot run in the race`);
+}
+else {
+  console.log(`${name} can run in the race`);
+}
+// Ternary operator
+console.log(id === 100 ? 'CORRECT' : 'INCORRECT');
+// Cruly brackets are NOT required
+if (id > 100)
+  console.log('CORRECT');
+else
+  console.log('INCORRECT');
+
+
+// SWITCH STATEMENTS
+const color = 'purp';
+switch (color) {
+  case ('red'):
+    console.log('Color is red');
+    break;
+  case ('blue'):
+    console.log('Color is blue');
+    break;
+  default:
+    console.log('Color is not red or blue');
+    break;
+}
+let day;
+switch (new Date().getDay()) {
+  case (0):
+    console.log('Day is Sunday');
+    break;
+  case (1):
+    console.log('Day is Monday');
+    break;
+  case (2):
+    console.log('Day is Tuesday');
+    break;
+  case (3):
+    console.log('Day is Wednesday');
+    break;
+  case (4):
+    console.log('Day is Thursday');
+    break;
+  case (5):
+    console.log('Day is Friday');
+    break;
+  case (6):
+    console.log('Day is Saturday');
+    break;
+}
+
+
+// FUNCTIONS
+// Function Declarations
+function greet(firstName = 'John', lastName = 'Doe') {
+  // console.log('Hello there!');
+  return 'Hello ' + firstName + ' ' + lastName;
+}
+console.log(greet('Bob', 'Smith'));
+// Function Expressions
+const square = function (x = 3) {
+  return x * x;
+};
+console.log(square(8));
+// Immediately Invokable Function Expressions (IIFEs)
+(function (name) {
+  console.log('Hello ' + name);
+})('Jay');
+// Property Methods (function in an object)
+const todo = {
+  add: function () {
+    console.log('Add todo');
+  },
+  edit: function (id) {
+    console.log(`Edit todo #${id}`);
+  }
+}
+todo.add();
+todo.edit(3);
+*/
+
+// LOOPS & ITERATION
+// For-loop
+for (let i = 0; i <= 10; i++) {
+  if (i === 2) {
+    console.log('2 is my fav number');
+    continue;
+  }
+  if (i === 5) {
+    console.log('Stop the loop!');
+    break;
+  }
+  console.log(i);
+}
+// While-loop
+let j = 0;
+while (j < 10) {
+  console.log(j);
+  j++;
+}
+// Do-while
+let k = 0;
+do {
+  console.log(k);
+  k++;
+}
+while (k < 10);
+// Iterating over arrays
+const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+// for (let x = 0; x < cars.length; x++) {
+//   console.log(cars[x]);
+// }
+// forEach
+cars.forEach(function (car, index, array) {
+  // console.log(car);
+  console.log(`${index} : ${car}`);
+  console.log(array);
+});
+// map
+const users = [
+  {
+    id: 1,
+    name: 'John'
+  },
+  {
+    id: 2,
+    name: 'Bob'
+  },
+  {
+    id: 3,
+    name: 'Sara'
+  },
+];
+const ids = users.map(function (user) {
+  return user.id;
+});
+ids.forEach(function (id) {
+  console.log(id);
+});
+// for-In loop
+const user = {
+  firstName: 'Bob',
+  lastName: 'Smith',
+  age: 21
+};
+for (let x in user) {
+  console.log(`${x} : ${user[x]}`);
+}
