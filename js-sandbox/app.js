@@ -1,6 +1,6 @@
 // LOGGING TO THE CONSOLE
 /*
-(console.log('Let\'s learn some JavaScript');
+(console.log('Let\'s learn some JavaScript'));
 console.log(123);
 console.log(true);
 var greeting = 'Hello';
@@ -111,7 +111,7 @@ const val1 = 1;
 const val2 = '2';
 const sum = Number(val1 + val2);
 console.log(sum);
-console.log(typeof sum);'
+console.log(typeof sum); '
 
 
 // NUMBERS & MATH OBJECTS
@@ -488,7 +488,7 @@ const todo = {
 }
 todo.add();
 todo.edit(3);
-*/
+
 
 // LOOPS & ITERATION
 // For-loop
@@ -557,3 +557,72 @@ const user = {
 for (let x in user) {
   console.log(`${x} : ${user[x]}`);
 }
+
+
+// WINDOW METHODS, OBJECTS & PROPERTIES
+// Alert
+// alert('Hello World');
+// Prompt
+// const input = prompt();
+// alert(input);
+// Confirm
+// if (confirm('Are you sure?')) {
+//   console.log('YES');
+// }
+// else {
+//   console.log('NO');
+// }
+let val;
+// Outer height/width
+val = window.outerHeight;
+val = window.outerWidth;
+// Inner height/width (within scrollbars)
+val = window.innerHeight;
+val = window.innerWidth;
+// Scroll points
+val = window.scrollY;
+val = window.scrollX;
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+// Redirect
+// window.location.href = 'https://google.com';
+// window.location.reload();
+// History
+// window.history.go();
+val = window.history.length;
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.userAgent;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+
+// VARIABLE SCOPES
+// Global scope
+var a = 1;
+let b = 2;
+const c = 3;
+function test() {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log('Function scope: ', a, b, c);
+}
+test();
+if (true) {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log('If-statement block scope: ', a, b, c);
+}
+for (var a = 0; a < 10; a++) {
+  console.log(`Loop: ${a}`);
+}
+console.log('Global scope: ', a, b, c);
+*/
