@@ -17,6 +17,13 @@
     />
 
     <title>Loan Calculator</title>
+
+    <style>
+      #loading,
+      #results {
+        display: none;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <div class="container">
@@ -75,9 +82,9 @@
             </form>
 
             <!-- Loading Image -->
-            <!-- <div id="loading">
+            <div id="loading">
               <img src="img/loading.gif" alt="Loading Gif" />
-            </div> -->
+            </div>
 
             <!-- Results -->
             <div id="results" class="pt-4">
@@ -105,7 +112,7 @@
                   <input
                     type="number"
                     class="form-control"
-                    id="Total-payment"
+                    id="total-payment"
                     disabled
                   />
                 </div>
